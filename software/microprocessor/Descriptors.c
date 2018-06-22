@@ -47,7 +47,7 @@ const USB_Descriptor_Device_t PROGMEM DeviceDescriptor =
 {
 	.Header                 = {.Size = sizeof(USB_Descriptor_Device_t), .Type = DTYPE_Device},
 
-	.USBSpecification       = VERSION_BCD(01.10),
+	.USBSpecification       = VERSION_BCD(02.00),  /*VERSION_BCD(1.10)*/
 	.Class                  = CDC_CSCP_CDCClass,
 	.SubClass               = CDC_CSCP_NoSpecificSubclass,
 	.Protocol               = CDC_CSCP_NoSpecificProtocol,
@@ -55,8 +55,8 @@ const USB_Descriptor_Device_t PROGMEM DeviceDescriptor =
 	.Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
 
 	.VendorID               = 0x03EB,
-	.ProductID              = 0x2045,
-	.ReleaseNumber          = VERSION_BCD(00.01),
+	.ProductID              = 0x2FEE /*0x2045*/,
+	.ReleaseNumber          = VERSION_BCD(00.02),  /*VERSION_BCD(00.01)*/
 
 	.ManufacturerStrIndex   = 0x01,
 	.ProductStrIndex        = 0x02,
@@ -77,7 +77,7 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 			.Header                 = {.Size = sizeof(USB_Descriptor_Configuration_Header_t), .Type = DTYPE_Configuration},
 
 			.TotalConfigurationSize = sizeof(USB_Descriptor_Configuration_t),
-			.TotalInterfaces        = 2,
+			.TotalInterfaces        = 1, /*2,*/
 
 			.ConfigurationNumber    = 1,
 			.ConfigurationStrIndex  = NO_DESCRIPTOR,
@@ -94,7 +94,7 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 			.InterfaceNumber        = 0,
 			.AlternateSetting       = 0,
 
-			.TotalEndpoints         = 1,
+			.TotalEndpoints         = 1, /*1,*/
 
 			.Class                  = CDC_CSCP_CDCClass,
 			.SubClass               = CDC_CSCP_ACMSubclass,
@@ -108,7 +108,7 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 			.Header                 = {.Size = sizeof(USB_CDC_Descriptor_FunctionalHeader_t), .Type = DTYPE_CSInterface},
 			.Subtype                = CDC_DSUBTYPE_CSInterface_Header,
 
-			.CDCSpecification       = VERSION_BCD(01.10),
+			.CDCSpecification       = VERSION_BCD(02.00), /*VERSION_BCD(01.10),*/
 		},
 
 	.CDC_Functional_ACM =
@@ -257,4 +257,3 @@ uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
 	*DescriptorAddress = Address;
 	return Size;
 }
-

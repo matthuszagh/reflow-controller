@@ -1,17 +1,17 @@
 #Geiger counter Makefile
 
-MCU			 = atmega8u2
-ARCH		 = AVR8
-BOARD 		 = NONE
-F_CPU 		 = 8000000
-F_USB		 = $(F_CPU)
-OPTIMIZATION = s
-TARGET		 = reflow
-SRC			 = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS)
-LUFA_PATH 	 = ./LUFA
-CC_FLAGS	 = -DUSE_LUFA_CONFIG_HEADER -IConfig/
-LD_FLAGS	 =
-SERIAL		 =	/dev/ttyACM0
+MCU		= atmega8u2
+ARCH		= AVR8
+BOARD 		= NONE
+F_CPU 		= 8000000
+F_USB 		= $(F_CPU)
+OPTIMIZATION 	= s
+TARGET		= reflow
+SRC		= $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS)
+LUFA_PATH       = ./LUFA
+CC_FLAGS	= -DUSE_LUFA_CONFIG_HEADER -IConfig/
+LD_FLAGS	=
+SERIAL		=	/dev/ttyACM0
 
 all:
 
@@ -26,6 +26,10 @@ include $(LUFA_PATH)/Build/lufa_hid.mk
 include $(LUFA_PATH)/Build/lufa_avrdude.mk
 include $(LUFA_PATH)/Build/lufa_atprogram.mk
 
-upload: all
-	avrdude -p atmega8u2 -b 19200 -P $(SERIAL) -c avrisp -v -e -U flash:w:$(TARGET).hex -U eeprom:w:$(TARGET).eep
+# upload: all
+# 	dfu-programmer $(MCU) erase
+# 	dfu-programmer $(MCU) flash $(TARGET).hex --suppress-bootloader-mem
+# 	dfu-programmer $(MCU) reset
 
+upload: all
+	avrdude -p atmega8u2 -b 19200 -c usbtiny -B 1 -v -e -U flash:w:$(TARGET).hex -U eeprom:w:$(TARGET).eep
