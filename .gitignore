@@ -3,3 +3,4 @@
 *.d
 ENV/
 TAGS
+*.bak
