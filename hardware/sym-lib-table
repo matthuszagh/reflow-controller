@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name reflow-controller-rescue)(type Legacy)(uri ${KIPRJMOD}/reflow-controller-rescue.lib)(options "")(descr ""))
+)

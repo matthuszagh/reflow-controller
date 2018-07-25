@@ -4,7 +4,8 @@
 // AVR Libc headers
 #include <stdio.h>
 #include <avr/power.h>
-#include <avr/prom.h>
+#include <avr/eeprom.h>
+#include <avr/wdt.h>
 #include <inttypes.h>
 
 // LUFA headers
