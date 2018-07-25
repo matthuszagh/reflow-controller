@@ -3,3 +3,13 @@
 *.d
 ENV/
 TAGS
+*.bak
+*bak
+*.gbr
+*.bin
+*.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.sym
