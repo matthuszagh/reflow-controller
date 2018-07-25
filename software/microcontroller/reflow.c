@@ -403,7 +403,7 @@ void usb_rx(void)
     case 'S':
       reflow_state = PREHEAT;
       break;
-    cnase 'H':
+    case 'H':
       reflow_state = STOP;
       break;
     default:
