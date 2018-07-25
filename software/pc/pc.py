@@ -78,23 +78,23 @@ def get_profile(ser):
         x = ser.readline()
         if '!' in x:
             break
-    pos = x.index('!')+1
-    settings = list(ast.literal_eval(x[pos:]))
+        pos = x.index('!')+1
+        settings = list(ast.literal_eval(x[pos:]))
     return settings
 
 def print_profile(settings):
     for i in (0,1,2,4,6):
         settings[i] /=4.
-    print "Start rate",settings[0],'C/s'
-    print "Soak temp start",settings[1],'C'
-    print "Soak temp end",settings[2],'C'
-    print "Soak length",settings[3],'s'
-    print "Peak temp",settings[4],'C'
-    print "Time to peak",settings[5],'s'
-    print "Cool rate",settings[6],'C/s'
-    print "PID P",settings[7]
-    print "PID I",settings[8]
-    print "PID D",settings[9]
+        print "Start rate",settings[0],'C/s'
+        print "Soak temp start",settings[1],'C'
+        print "Soak temp end",settings[2],'C'
+        print "Soak length",settings[3],'s'
+        print "Peak temp",settings[4],'C'
+        print "Time to peak",settings[5],'s'
+        print "Cool rate",settings[6],'C/s'
+        print "PID P",settings[7]
+        print "PID I",settings[8]
+        print "PID D",settings[9]
 
 def write_profile(ser, settings):
     """Writes a correctly formatted list of settings to device"""
@@ -136,10 +136,10 @@ def set_profile(ser,settings):
     #Firmware needs units in quarter celsius for temperatures
     for i in (0,1,2,4,6):
         settings[i] *=4
-    settings = map(int,settings)
-    write_profile(ser, settings)
-    print "New profile:"
-    print_profile(get_profile(ser))
+        settings = map(int,settings)
+        write_profile(ser, settings)
+        print "New profile:"
+        print_profile(get_profile(ser))
 
 def get_status(ser):
     states = ['Stop','Preheat','Soak','Peak','Cool']
@@ -168,7 +168,7 @@ def print_status(status):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Reflow oven controller program")
     parser.add_argument('-s','--set', nargs=7, metavar=('start_rate', 'soak_temp_start',
-        'soak_temp_end', 'soak_length', 'peak_temp', 'time_to_peak', 'cool_rate'), type=float, help='Set temperature profile')
+                                                        'soak_temp_end', 'soak_length', 'peak_temp', 'time_to_peak', 'cool_rate'), type=float, help='Set temperature profile')
     parser.add_argument('-p','--set_pid', nargs=3, metavar=('P','I','D'), type=float, help='Set PID coefficients')
     parser.add_argument('-g','--get', action='store_true', help='Get the current profile')
     parser.add_argument('-l','--plot', dest='plot', action='store_true', help="Draw plot")
@@ -208,8 +208,8 @@ if __name__ == "__main__":
         p1, = ax.plot([], [])
 
         anim = animation.FuncAnimation(fig, analogPlot.update,
-                                         fargs=(p0,p1,ax),
-                                         interval=10)
+                                       fargs=(p0,p1,ax),
+                                       interval=10)
         start_reflow(ser)
         plt.show()
         exit()
