@@ -229,6 +229,8 @@ void setup_hardware(void)
    */
   OCR1A = TOP;
 
+  OCR1B = 1;
+
   /** DDRC is the data direction register for channel C. Since we use PC6 as the relay signal we
    *  must set it to write=1.
    */
@@ -237,7 +239,7 @@ void setup_hardware(void)
   /** Enable an interrupt vector to be signaled when TCNT1 reaches the top value. This will be used
    *  to update OCR1A value.
    */
-  TIMSK1 = (1<<OCIE1A);
+  TIMSK1 = (1<<OCIE1B);
 
   /** SPCR is the SPI Control Register. When SPE is set to 1, SPI is enabled and when MSTR is set to
    *  1, it is in master mode. This is described on page 145.
@@ -474,7 +476,7 @@ void EVENT_USB_Device_Disconnect(void)
 }
 
 /** Register the interrupt. The LUFA macro ISR is needed to properly handle the interrupt. */
-ISR(TIMER1_COMPA_vect)
+ISR(TIMER1_COMPB_vect)
 {
   /** When TCNT1 reaches the top value, raise flag to call `update_pid()` to update OCR1A. */
   update_pid = 1;

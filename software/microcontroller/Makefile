@@ -24,4 +24,4 @@ include $(LUFA_PATH)/Build/lufa_avrdude.mk
 include $(LUFA_PATH)/Build/lufa_atprogram.mk
 
 upload: all
-	avrdude -p atmega8u2 -b 19200 -c usbtiny -B 1 -v -e -U flash:w:$(TARGET).hex -U eeprom:w:$(TARGET).eep
+	avrdude -p atmega8u2 -b 19200 -c usbtiny -U flash:w:$(TARGET).hex -U eeprom:w:$(TARGET).eep
