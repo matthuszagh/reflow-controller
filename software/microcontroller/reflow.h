@@ -1,24 +1,34 @@
-#ifndef REFLOW_H
-#define REFLOW_H
+#ifndef _REFLOW_H
+#define _REFLOW_H
 
-// AVR Libc headers
-#include <stdio.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/wdt.h>
+#include <avr/sleep.h>
 #include <avr/power.h>
 #include <avr/eeprom.h>
-#include <avr/wdt.h>
-#include <inttypes.h>
+#include <avr/interrupt.h>
+#include <string.h>
+#include <stdio.h>
+#include <util/delay.h>
 
-// LUFA headers
 #include "Descriptors.h"
+#include <LUFA/Drivers/Peripheral/Serial.h>
 #include <LUFA/Drivers/USB/USB.h>
 
-static void setup_hardware(void);
-static uint16_t read_temp(void);
-static uint16_t get_target(uint16_t, uint16_t*);
-static void usb_rx(void);
-static void write_profile(void);
-static void print_profile(void);
-static uint16_t pid(uint16_t, uint16_t);
+#define _NOP() do { __asm__ __volatile__ ("nop"); } while (0)
+#define bit_set(p,m) ((p) |= (1<<m))
+#define bit_clear(p,m) ((p) &= ~(1<<m))
+#define _ICR1 6250 /* Counts 0.2 seconds */
+/* Clamp x between l and h */
+#define CLAMP(x, l, h) (((x) > (h)) ? (h) : (((x) < (l)) ? (l) : (x)))
+#define SIGN(x) ((x > 0) ? 1 : ((x < 0) ? -1 : 0))
+#define MAXTEMP 340
+//#define MIN(x,y) (((x)<(y) ? (x) : (y)))
+void EVENT_USB_Device_Connect(void);
+void EVENT_USB_Device_Disconnect(void);
+void EVENT_USB_Device_ConfigurationChanged(void);
+void EVENT_USB_Device_ControlRequest(void);
 
 typedef struct {
   uint16_t preheat_rate;
@@ -43,5 +53,11 @@ typedef enum {
   REFLOW_TAL,
   COOL
 } state;
+
+uint16_t get_target(uint16_t temp, uint16_t *timer);
+uint16_t pid(uint16_t, uint16_t);
+void set_profile(void);
+void write_profile(void);
+void output_profile(void);
 
 #endif

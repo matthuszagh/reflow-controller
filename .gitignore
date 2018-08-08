@@ -13,3 +13,6 @@ TAGS
 *.lss
 *.map
 *.sym
+*.html
+*.js
+*-old*

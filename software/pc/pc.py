@@ -142,7 +142,7 @@ def set_profile(ser,settings):
         print_profile(get_profile(ser))
 
 def get_status(ser):
-    states = ['Stop','Preheat','Soak','Peak','Cool']
+    states = ['Stop','Preheat','Soak','Reflow Ramp','Reflow TAL','Cool']
     s = ser.readline()
     s = s.strip()
     s = s.replace(':',',')
