@@ -16,3 +16,4 @@ TAGS
 *.html
 *.js
 *-old*
+/hardware/fp-info-cache

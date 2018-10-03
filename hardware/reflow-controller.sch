@@ -264,7 +264,7 @@ RST
 Wire Wire Line
 	7950 1550 8300 1550
 Text Label 8300 1550 2    50   ~ 0
-VCC
+VBUS
 Wire Wire Line
 	7950 1650 8300 1650
 Text Label 8300 1650 2    50   ~ 0
@@ -564,7 +564,7 @@ Connection ~ 5500 3800
 Wire Wire Line
 	5500 3800 5500 3950
 $Comp
-L MCU_Microchip_ATmega:ATmega8U2-AU U3
+L reflow-controller-rescue:ATmega8U2-AU-MCU_Microchip_ATmega U3
 U 1 1 5B3659A5
 P 7400 4400
 F 0 "U3" H 6850 5800 50  0000 C CNN
@@ -666,17 +666,6 @@ Wire Wire Line
 Connection ~ 7300 2700
 Wire Wire Line
 	7300 2700 7300 2400
-$Comp
-L Connector:USB_B_Mini J1
-U 1 1 5B3FB3D2
-P 2500 4350
-F 0 "J1" H 2555 4817 50  0000 C CNN
-F 1 "USB_B_Mini" H 2555 4726 50  0000 C CNN
-F 2 "Connector_USB:USB_Mini-B_Lumberg_2486_01_Horizontal" H 2650 4300 50  0001 C CNN
-F 3 "~" H 2650 4300 50  0001 C CNN
-	1    2500 4350
-	1    0    0    -1  
-$EndComp
 NoConn ~ 2800 4550
 Wire Wire Line
 	2150 4750 2400 4750
@@ -897,4 +886,111 @@ F 3 "~" H 2550 1550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2550 1700 2550 1800
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5BB4219C
+P 2500 4350
+F 0 "J1" H 2555 4817 50  0000 C CNN
+F 1 "USB_B_Micro" H 2555 4726 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 2650 4300 50  0001 C CNN
+F 3 "~" H 2650 4300 50  0001 C CNN
+	1    2500 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MH2
+U 1 1 5BB44E9C
+P 1600 1250
+F 0 "MH2" H 1700 1301 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1700 1210 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 1600 1250 50  0001 C CNN
+F 3 "~" H 1600 1250 50  0001 C CNN
+	1    1600 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MH3
+U 1 1 5BB44F1A
+P 10600 1100
+F 0 "MH3" H 10700 1151 50  0000 L CNN
+F 1 "MountingHole_Pad" H 10700 1060 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10600 1100 50  0001 C CNN
+F 3 "~" H 10600 1100 50  0001 C CNN
+	1    10600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MH4
+U 1 1 5BB44F98
+P 10600 6050
+F 0 "MH4" H 10700 6101 50  0000 L CNN
+F 1 "MountingHole_Pad" H 10700 6010 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 10600 6050 50  0001 C CNN
+F 3 "~" H 10600 6050 50  0001 C CNN
+	1    10600 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MH1
+U 1 1 5BB4500A
+P 1500 6150
+F 0 "MH1" H 1600 6201 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1600 6110 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 1500 6150 50  0001 C CNN
+F 3 "~" H 1500 6150 50  0001 C CNN
+	1    1500 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5BB451EE
+P 1600 1500
+F 0 "#PWR0101" H 1600 1250 50  0001 C CNN
+F 1 "GND" H 1605 1327 50  0000 C CNN
+F 2 "" H 1600 1500 50  0001 C CNN
+F 3 "" H 1600 1500 50  0001 C CNN
+	1    1600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5BB45237
+P 1500 6400
+F 0 "#PWR0102" H 1500 6150 50  0001 C CNN
+F 1 "GND" H 1505 6227 50  0000 C CNN
+F 2 "" H 1500 6400 50  0001 C CNN
+F 3 "" H 1500 6400 50  0001 C CNN
+	1    1500 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5BB45280
+P 10600 6300
+F 0 "#PWR0113" H 10600 6050 50  0001 C CNN
+F 1 "GND" H 10605 6127 50  0000 C CNN
+F 2 "" H 10600 6300 50  0001 C CNN
+F 3 "" H 10600 6300 50  0001 C CNN
+	1    10600 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5BB4FB0F
+P 10600 1350
+F 0 "#PWR0114" H 10600 1100 50  0001 C CNN
+F 1 "GND" H 10605 1177 50  0000 C CNN
+F 2 "" H 10600 1350 50  0001 C CNN
+F 3 "" H 10600 1350 50  0001 C CNN
+	1    10600 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 1350 10600 1200
+Wire Wire Line
+	10600 6150 10600 6300
+Wire Wire Line
+	1500 6250 1500 6400
+Wire Wire Line
+	1600 1500 1600 1350
 $EndSCHEMATC
