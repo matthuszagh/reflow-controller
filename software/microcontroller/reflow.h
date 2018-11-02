@@ -1,24 +1,26 @@
 #ifndef _REFLOW_H
 #define _REFLOW_H
 
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <avr/wdt.h>
-#include <avr/sleep.h>
-#include <avr/power.h>
 #include <avr/eeprom.h>
 #include <avr/interrupt.h>
-#include <string.h>
+#include <avr/io.h>
+#include <avr/power.h>
+#include <avr/sleep.h>
+#include <avr/wdt.h>
 #include <stdio.h>
+#include <string.h>
 #include <util/delay.h>
 
 #include "Descriptors.h"
 #include <LUFA/Drivers/Peripheral/Serial.h>
 #include <LUFA/Drivers/USB/USB.h>
 
-#define _NOP() do { __asm__ __volatile__ ("nop"); } while (0)
-#define bit_set(p,m) ((p) |= (1<<m))
-#define bit_clear(p,m) ((p) &= ~(1<<m))
+#define _NOP()                                                                 \
+  do {                                                                         \
+    __asm__ __volatile__("nop");                                               \
+  } while (0)
+#define bit_set(p, m) ((p) |= (1 << m))
+#define bit_clear(p, m) ((p) &= ~(1 << m))
 #define _ICR1 6250 /* Counts 0.2 seconds */
 /* Clamp x between l and h */
 #define CLAMP(x, l, h) (((x) > (h)) ? (h) : (((x) < (l)) ? (l) : (x)))
@@ -45,19 +47,15 @@ typedef struct {
   uint16_t pid_d;
 } profile_t;
 
-typedef enum {
-  STOP = 0,
-  PREHEAT,
-  SOAK,
-  REFLOW_RAMP,
-  REFLOW_TAL,
-  COOL
-} state;
+typedef enum { STOP = 0, PREHEAT, SOAK, REFLOW_RAMP, REFLOW_TAL, COOL } state;
 
 uint16_t get_target(uint16_t temp, uint16_t *timer);
 uint16_t pid(uint16_t, uint16_t);
 void set_profile(void);
 void write_profile(void);
 void output_profile(void);
+void setup_hardware(void);
+uint16_t read_temp(void);
+void usb_rx(void);
 
 #endif
