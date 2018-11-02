@@ -1,4 +1,4 @@
-update=Wed 03 Oct 2018 07:47:53 PM EDT
+update=Fri 02 Nov 2018 09:33:29 AM EDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -51,10 +51,10 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.2
-SolderMaskMinWidth=0.25
+SolderMaskClearance=0.07619999999999999
+SolderMaskMinWidth=0.1016
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/1]
 Name=GND
