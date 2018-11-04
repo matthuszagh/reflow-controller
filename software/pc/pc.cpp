@@ -1,5 +1,6 @@
 #include "pc.hpp"
 #include "matplotlibcpp.h"
+#include <iomanip>
 #include <iostream>
 #include <regex>
 #include <string>
@@ -82,9 +83,10 @@ int main() {
       ++cnt;
     }
 
-    std::cout << "temp: " << temp_val << "\troom: " << room_val
-              << "\ttarget: " << target_val << "\tpwm: " << pwm_val
-              << "\t\tstate: " << state_val << '\n';
+    std::cout << std::setw(12) << "temp: " << temp_val << std::setw(12)
+              << "room: " << room_val << std::setw(12)
+              << "target: " << target_val << std::setw(12) << "pwm: " << pwm_val
+              << std::setw(12) << "state: " << state_val << '\n';
 
     if (r < 0) {
       std::cout << "Failed to read data.\n";
