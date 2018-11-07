@@ -56,8 +56,21 @@ int main() {
   while (true) {
     // usleep(1e6);
     r = read_data(devh, data_read, sizeof(data_read));
-    std::string data_str((char *)data_read);
-    // std::cout << data_str;
+    std::string data_str(reinterpret_cast<char *>(data_read));
+    std::cout << data_str;
+    double temp_val, target_val;
+    try {
+      temp_val = static_cast<double>(std::stoi(data_str.substr(5))) / 4;
+    } catch (std::invalid_argument) {
+    }
+    try {
+      target_val = static_cast<double>(std::stoi(data_str.substr(24))) / 4;
+    } catch (std::invalid_argument) {
+    }
+    temp.push_back(temp_val);
+    target.push_back(target_val);
+
+    /* This uses regular expressions and is very slow.
     std::regex reg_pattern("\\d+");
     auto matches_begin =
         std::sregex_iterator(data_str.begin(), data_str.end(), reg_pattern);
@@ -87,6 +100,7 @@ int main() {
               << "room: " << room_val << std::setw(12)
               << "target: " << target_val << std::setw(12) << "pwm: " << pwm_val
               << std::setw(12) << "state: " << state_val << '\n';
+    */
 
     if (r < 0) {
       std::cout << "Failed to read data.\n";
