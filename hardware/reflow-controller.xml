@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/matt/developer/personal/reflow-controller/hardware/reflow-controller.sch</source>
-    <date>Thu 01 Nov 2018 08:37:42 PM EDT</date>
-    <tool>Eeschema 6.0.0-rc1-unknown-c4cd81a~84~ubuntu18.04.1</tool>
+    <date>Tue 18 Dec 2018 07:05:10 PM EST</date>
+    <tool>Eeschema 5.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -24,7 +24,7 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Tolerance">5%</field>
+        <field name="MFN">CR0603-JW-220ELF</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -35,7 +35,7 @@
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Tolerance">5%</field>
+        <field name="MFN">CR0603-JW-220ELF</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -45,6 +45,9 @@
       <value>1u</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">GRM188R60J105KA01D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B19B1C7</tstamp>
@@ -54,24 +57,30 @@
       <footprint>Crystal:Crystal_SMD_HC49-SD</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="manf#">ABLS-8.000MHZ-B4-T</field>
+        <field name="MFN">ABLS-8.000MHZ-B4-T</field>
       </fields>
       <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B19B7FB</tstamp>
     </comp>
     <comp ref="C4">
-      <value>26p</value>
+      <value>20p</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CL10C200JB8NNNC</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B19BD77</tstamp>
     </comp>
     <comp ref="C5">
-      <value>26p</value>
+      <value>20p</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CL10C200JB8NNNC</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B19BFEE</tstamp>
@@ -81,7 +90,7 @@
       <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
       <datasheet>http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf</datasheet>
       <fields>
-        <field name="manf#">MAX31855KASA+T</field>
+        <field name="MFN">MAX31855KASA+T</field>
       </fields>
       <libsource lib="Sensor_Temperature" part="MAX31855KASA" description="Cold Junction K-type Termocouple Interface, SPI, SO8"/>
       <sheetpath names="/" tstamps="/"/>
@@ -91,6 +100,9 @@
       <value>0.1u</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CL10B104KO8NNNC</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1A9863</tstamp>
@@ -99,6 +111,9 @@
       <value>Conn_01x02</value>
       <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">1935161</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1AA059</tstamp>
@@ -115,6 +130,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CR0603-FX-1002HLF</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1C9481</tstamp>
@@ -123,6 +141,9 @@
       <value>D</value>
       <footprint>Diode_SMD:D_SOD-323</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">1N4148WS-7-F</field>
+      </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1CE015</tstamp>
@@ -132,7 +153,7 @@
       <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
       <datasheet>https://www.diodes.com/assets/Datasheets/AP2127.pdf</datasheet>
       <fields>
-        <field name="manf#">AP2127K-3.3TRG1</field>
+        <field name="MFN">AP2127K-3.3TRG1</field>
       </fields>
       <libsource lib="Regulator_Linear" part="AP2127K-3.3" description="300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 3.3V fixed positive output, SOT-23-5 package"/>
       <sheetpath names="/" tstamps="/"/>
@@ -142,6 +163,9 @@
       <value>10u</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CL10A106KP8NNNC</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1D63DC</tstamp>
@@ -150,6 +174,9 @@
       <value>1u</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">GRM188R60J105KA01D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B1E81B4</tstamp>
@@ -159,7 +186,7 @@
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>http://www.fairchildsemi.com/ds/BC/BC817.pdf</datasheet>
       <fields>
-        <field name="manf#">BC817-40Q-13-F</field>
+        <field name="MFN">BC817-40Q-13-F</field>
       </fields>
       <libsource lib="Transistor_BJT" part="BC817" description="0.8A Ic, 45V Vce, NPN Transistor, SOT-23"/>
       <sheetpath names="/" tstamps="/"/>
@@ -185,6 +212,9 @@
       <value>0.1u</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CL10B104KO8NNNC</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B3437CF</tstamp>
@@ -193,6 +223,9 @@
       <value>0.1u</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CL10B104KO8NNNC</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B34381B</tstamp>
@@ -201,6 +234,9 @@
       <value>ATmega8U2-AU</value>
       <footprint>Package_QFP:TQFP-32_7x7mm_P0.8mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf</datasheet>
+      <fields>
+        <field name="MFN">ATMEGA8U2-AU</field>
+      </fields>
       <libsource lib="reflow-controller-rescue" part="ATmega8U2-AU-MCU_Microchip_ATmega" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B3659A5</tstamp>
@@ -209,6 +245,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CR0603-FX-1001HLF</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B41ACBA</tstamp>
@@ -217,6 +256,9 @@
       <value>10n</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">C1608X7R2A103M080AA</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B41ADDF</tstamp>
@@ -225,6 +267,9 @@
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">CR0603-FX-1002HLF</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B42D8BD</tstamp>
@@ -233,6 +278,9 @@
       <value>LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">SML-D12V8WT86</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B432F6C</tstamp>
@@ -241,6 +289,9 @@
       <value>240</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">ERA-3AEB241V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5B45B251</tstamp>
@@ -253,7 +304,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BB4219C</tstamp>
     </comp>
-    <comp ref="MH2">
+    <comp ref="H2">
       <value>MountingHole_Pad</value>
       <footprint>MountingHole:MountingHole_2.7mm_M2.5_Pad_Via</footprint>
       <datasheet>~</datasheet>
@@ -261,7 +312,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BB44E9C</tstamp>
     </comp>
-    <comp ref="MH3">
+    <comp ref="H3">
       <value>MountingHole_Pad</value>
       <footprint>MountingHole:MountingHole_2.7mm_M2.5_Pad_Via</footprint>
       <datasheet>~</datasheet>
@@ -269,7 +320,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BB44F1A</tstamp>
     </comp>
-    <comp ref="MH4">
+    <comp ref="H4">
       <value>MountingHole_Pad</value>
       <footprint>MountingHole:MountingHole_2.7mm_M2.5_Pad_Via</footprint>
       <datasheet>~</datasheet>
@@ -277,7 +328,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BB44F98</tstamp>
     </comp>
-    <comp ref="MH1">
+    <comp ref="H1">
       <value>MountingHole_Pad</value>
       <footprint>MountingHole:MountingHole_2.7mm_M2.5_Pad_Via</footprint>
       <datasheet>~</datasheet>
@@ -599,25 +650,25 @@
   </libparts>
   <libraries>
     <library logical="Connector">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Connector.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Connector.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Connector_Generic.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Device.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="Mechanical">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Mechanical.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Mechanical.lib</uri>
     </library>
     <library logical="Regulator_Linear">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Regulator_Linear.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Regulator_Linear.lib</uri>
     </library>
     <library logical="Sensor_Temperature">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Sensor_Temperature.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Sensor_Temperature.lib</uri>
     </library>
     <library logical="Transistor_BJT">
-      <uri>/usr/lib/kicad-nightly/share/kicad/library/Transistor_BJT.lib</uri>
+      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Transistor_BJT.lib</uri>
     </library>
     <library logical="reflow-controller-rescue">
       <uri>/home/matt/developer/personal/reflow-controller/hardware/reflow-controller-rescue.lib</uri>
@@ -678,7 +729,7 @@
     </net>
     <net code="16" name="GND">
       <node ref="C6" pin="2"/>
-      <node ref="MH2" pin="1"/>
+      <node ref="H2" pin="1"/>
       <node ref="D2" pin="1"/>
       <node ref="J1" pin="6"/>
       <node ref="J1" pin="5"/>
@@ -694,9 +745,9 @@
       <node ref="C2" pin="2"/>
       <node ref="U3" pin="3"/>
       <node ref="U3" pin="28"/>
-      <node ref="MH3" pin="1"/>
-      <node ref="MH4" pin="1"/>
-      <node ref="MH1" pin="1"/>
+      <node ref="H3" pin="1"/>
+      <node ref="H4" pin="1"/>
+      <node ref="H1" pin="1"/>
       <node ref="C8" pin="2"/>
       <node ref="C7" pin="2"/>
     </net>
