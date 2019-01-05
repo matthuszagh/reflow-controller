@@ -19,3 +19,4 @@ TAGS
 /hardware/fp-info-cache
 /software/pc/pc
 *.tmp
+/software/pc/compile_commands.json
