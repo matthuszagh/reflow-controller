@@ -6,7 +6,7 @@ flags = -O3 -g -pthread $(err_flags) -std=c++11 -lusb-1.0
 debug_flags = -g -pthread $(err_flags) -std=c++11 -lusb-1.0
 
 all:
-	$(compiler) $(sources) $(flags) -o $(executable)
+	bear --append $(compiler) $(sources) $(flags) -o $(executable)
 
 debug:
 	$(compiler) $(sources) $(debug_flags) -o $(executable)

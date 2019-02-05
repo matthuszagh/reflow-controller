@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/matt/developer/personal/reflow-controller/hardware/reflow-controller.sch</source>
-    <date>Tue 18 Dec 2018 07:05:10 PM EST</date>
-    <tool>Eeschema 5.0.1</tool>
+    <source>/home/matt/developer/src/personal/reflow-controller/hardware/reflow-controller.sch</source>
+    <date>Fri 18 Jan 2019 08:28:41 AM EST</date>
+    <tool>Eeschema (6.0.0-rc1-dev-1525-g644855c5b)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -300,6 +300,9 @@
       <value>USB_B_Micro</value>
       <footprint>Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="MFN">10103594-0001LF</field>
+      </fields>
       <libsource lib="Connector" part="USB_B_Micro" description="USB Micro Type B connector"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BB4219C</tstamp>
@@ -650,28 +653,28 @@
   </libparts>
   <libraries>
     <library logical="Connector">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Connector.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Connector.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Connector_Generic.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Device.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Device.lib</uri>
     </library>
     <library logical="Mechanical">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Mechanical.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Mechanical.lib</uri>
     </library>
     <library logical="Regulator_Linear">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Regulator_Linear.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Regulator_Linear.lib</uri>
     </library>
     <library logical="Sensor_Temperature">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Sensor_Temperature.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Sensor_Temperature.lib</uri>
     </library>
     <library logical="Transistor_BJT">
-      <uri>/home/matt/developer/collab/kicad/kicad-symbols/Transistor_BJT.lib</uri>
+      <uri>/home/matt/developer/src/collab/kicad/kicad-symbols/Transistor_BJT.lib</uri>
     </library>
     <library logical="reflow-controller-rescue">
-      <uri>/home/matt/developer/personal/reflow-controller/hardware/reflow-controller-rescue.lib</uri>
+      <uri>/home/matt/developer/src/personal/reflow-controller/hardware/reflow-controller-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
